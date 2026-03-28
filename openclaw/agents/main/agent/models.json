@@ -1,0 +1,50 @@
+{
+  "providers": {
+    "ollama": {
+      "baseUrl": "http://ollama:11434",
+      "apiKey": "ollama-local",
+      "api": "ollama",
+      "models": [
+        {
+          "id": "qwen3:4b",
+          "name": "qwen3:4b",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 32768,
+          "maxTokens": 8192
+        }
+      ]
+    },
+    "custom-ollama-openai": {
+      "baseUrl": "http://ollama:11434/v1",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "llama3",
+          "name": "llama3 (Custom Provider)",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 16000,
+          "maxTokens": 4096,
+          "api": "openai-completions"
+        }
+      ]
+    }
+  }
+}
